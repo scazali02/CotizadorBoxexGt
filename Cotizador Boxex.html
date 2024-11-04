@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotizador Boxex</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cotizador-container">
+    <h2>Cotizador Boxex Services</h2>
+    <form id="cotizadorForm">
+      
+      <!-- Opción para elegir moneda -->
+      <label for="moneda">Moneda:</label>
+      <select id="moneda" name="moneda" required>
+        <option value="usd">Dólares (USD)</option>
+        <option value="gtq">Quetzales (GTQ)</option>
+      </select>
+
+      <!-- Tipo de plan -->
+      <label for="plan">Tipo de Plan:</label>
+      <select id="plan" name="plan" required>
+        <option value="regular">Boxex Regular ($2.95/lb)</option>
+        <option value="premium">Boxex Premium ($2.60/lb)</option>
+      </select>
+
+      <!-- Valor del producto -->
+      <label for="valorProducto">Valor del Producto (USD):</label>
+      <input type="number" id="valorProducto" name="valorProducto" step="0.01" required>
+
+      <!-- Peso en libras -->
+      <label for="peso">Peso (libras):</label>
+      <input type="number" id="peso" name="peso" step="0.01" required>
+
+      <!-- Descripción del Producto (arancel) -->
+      <label for="descripcion">Descripción del Producto (arancel):</label>
+      <select id="descripcion" name="descripcion" required>
+    <option value="0.00">APPLE Products (0.0%)</option>
+    <option value="0.15">ACCESORIO PARA AUTOS/CABLES PARA BUJIAS (15.0%)</option>
+    <option value="0.15">ACCESORIOS DE BELLEZA (15.0%)</option>
+    <option value="0.15">ACCESORIOS DEPORTIVOS/CAÑAS DE PESCAR (15.0%)</option>
+    <option value="0.00">ACCESORIOS MÉDICOS (0.0%)</option>
+    <option value="0.15">ACCESORIOS PARA CELULARES/ESTUCHES/BATERIAS/CABLES USB/BATERIAS/TABLETS (15.0%)</option>
+    <option value="0.15">ADORNOS NAVIDEÑOS (15.0%)</option>
+    <option value="0.15">ADORNOS PARA EL HOGAR (15.0%)</option>
+    <option value="0.00">ALARMAS (0.0%)</option>
+    <option value="0.15">ALFOMBRAS (15.0%)</option>
+    <option value="0.15">AMPLIFICADORES (15.0%)</option>
+    <option value="0.15">ANILLOS (15.0%)</option>
+    <option value="0.00">ANZUELOS (0.0%)</option>
+    <option value="0.15">ARETES (15.0%)</option>
+    <option value="0.10">AROS (10.0%)</option>
+    <option value="0.10">ASIENTOS (10.0%)</option>
+    <option value="0.15">ASPIRADORAS (15.0%)</option>
+    <option value="0.00">AUDIFONOS (0.0%)</option>
+    <option value="0.10">BAJOS (10.0%)</option>
+    <option value="0.10">BALANZAS (10.0%)</option>
+    <option value="0.05">BAQUETAS (5.0%)</option>
+    <option value="0.10">BÁSCULAS (10.0%)</option>
+    <option value="0.10">BATERÍAS (10.0%)</option>
+    <option value="0.15">BATERIAS COMPUTADORAS/DE CELULARES/DE CARRO (15.0%)</option>
+    <option value="0.15">BATERÍAS DE PILA/DURACEL/RAYOVAC/DE RELOJES (15.0%)</option>
+    <option value="0.10">BATES (10.0%)</option>
+    <option value="0.00">BIELAS (0.0%)</option>
+    <option value="0.15">BISUTERÍA (15.0%)</option>
+    <option value="0.15">BLUE RAY-DISCO (0.0%)</option>
+    <option value="0.15">BLUE RAY-EQUIPO PLAYER (15.0%)</option>
+    <option value="0.15">BLUETOOTH (0.0%)</option>
+    <option value="0.15">BLUSAS (15.0%)</option>
+    <option value="0.15">BOCINAS (0.0%)</option>
+    <option value="0.00">BOMBA DE AGUA/ACEITE (0.0%)</option>
+    <option value="0.15">BOTAS (15.0%)</option>
+    <option value="0.15">BRASALETES (15.0%)</option>
+    <option value="0.15">BUFANDAS (15.0%)</option>
+    <option value="0.00">BUJIAS (0.0%)</option>
+    <option value="0.10">BUMPERS (10.0%)</option>
+    <option value="0.15">CABLES USB (15.0%)</option>
+    <option value="0.15">CADENAS (15.0%)</option>
+    <option value="0.15">CALCETINES (15.0%)</option>
+    <option value="0.15">CALENDARIOS (15.0%)</option>
+    <option value="0.15">CALZADO (15.0%)</option>
+    <option value="0.00">CAMARAS DE SEGURIDAD (0.0%)</option>
+    <option value="0.10">CAMARAS DE VIDEO (10.0%)</option>
+    <option value="0.10">CAMARAS DIGITALES Y VIDEOCAMARAS (15.0%)</option>
+    <option value="0.15">CAMARAS FOTOGRAFICAS (15.0%)</option>
+    <option value="0.15">CAMARAS DE ROLLO/CINEMATOGRAFICA/ESTUCHES PARA CAMARAS/TRIPODES (15.0%)</option>
+    <option value="0.00">CAMARAS WEB (0.0%)</option>
+    <option value="0.15">CAMISETAS (15.0%)</option>
+    <option value="0.10">CAÑA DE PESCAR (10.0%)</option>
+    <option value="0.10">CAPOS (10.0%)</option>
+    <option value="0.00">CARGADORES DE CELULAR (0.0%)</option>
+    <option value="0.00">BUFANDAS (0.0%)</option>
+    <option value="0.15">CARTERAS (15.0%)</option>
+    <option value="0.00">CARTUCHOS (0.0%)</option>
+    <option value="0.00">CATALOGOS DE MAQUINARIA (0.0%)</option>
+    <option value="0.15">CATALOGOS PUBLICITARIOS (15.0%)</option>
+    <option value="0.00">CD ANTIVIRUS (0.0%)</option>
+    <option value="0.15">CD CON MUSICA (15.0%)</option>
+    <option value="0.00">CD EN BLANCO (0.0%)</option>
+    <option value="0.00">CD SOFTWARE (0.0%)</option>
+    <option value="0.00">CELULARES (0.0%)</option>
+    <option value="0.15">CHAQUETAS (15.0%)</option>
+    <option value="0.00">CIGUEÑALES (0.0%)</option>
+    <option value="0.15">CINCHOS (15.0%)</option>
+    <option value="0.05">CLAVIJAS (5.0%)</option>
+    <option value="0.15">COBERTORES (15.0%)</option>
+    <option value="0.15">COLLARES (15.0%)</option>
+    <option value="0.00">COPMUTADORES Y SUS PARTES (0.0%)</option>
+    <option value="0.15">CONSOLA DE VIDEO JUEGOS (15.0%)</option>
+    <option value="0.15">CONTROLES (15.0%)</option>
+    <option value="0.00">CPU (0.0%)</option>
+    <option value="0.15">CUADROS (15.0%)</option>
+    <option value="0.15">CUBIERTOS (15.0%)</option>
+    <option value="0.15">CUBRECAMAS (15.0%)</option>
+    <option value="0.05">CUERDAS (5.0%)</option>
+    <option value="0.00">DISCOS DUROS (0.0%)</option>
+    <option value="0.15">DISFRACES (15.0%)</option>
+    <option value="0.00">DVD (0.0%)</option>
+    <option value="0.15">DVD PLAYERS (15.0%)</option>
+    <option value="0.15">EDREDONES (15.0%)</option>
+    <option value="0.15">DRONES (15.0%)</option>
+    <option value="0.15">ELECTRODOMESTICOS (15.0%)</option>
+    <option value="0.00">ELECTRONICOS (0.0%)</option>
+    <option value="0.05">EMPAQUES (5.0%)</option>
+    <option value="0.15">EQUIPO DE SONIDO (15.0%)</option>
+    <option value="0.00">ESCANERS (0.0%)</option>
+    <option value="0.10">ESCAPES (10.0%)</option>
+    <option value="0.15">ESCLAVAS (15.0%)</option>
+    <option value="0.00">ESTARTE (0.0%)</option>
+    <option value="0.00">ESTETOSCOPIO (0.0%)</option>
+    <option value="0.15">ESTUCHES (15.0%)</option>
+    <option value="0.15">ESTUFAS (15.0%)</option>
+    <option value="0.15">EXTRACTORES DE CABELLO (15.0%)</option>
+    <option value="0.15">EXTRACTORES DE JUEGOS (15.0%)</option>
+    <option value="0.05">BUFANDAS (15.0%)</option>
+    <option value="0.15">FALDAS (15.0%)</option>
+    <option value="0.10">FLAUTAS (10.0%)</option>
+    <option value="0.15">GINAS (15.0%)</option>
+    <option value="0.15">GORRAS (15.0%)</option>
+    <option value="0.10">GUANTES (10.0%)</option>
+    <option value="0.15">GAFAS (15.0%)</option>
+    <option value="0.10">GUIRA (10.0%)</option>
+    <option value="0.15">GUITARRA (15.0%)</option>
+    <option value="0.00">HERRAMIENTAS DE MANO(0.0%)</option>
+    <option value="0.00">HILOS (0.0%)</option>
+    <option value="0.15">HORNOS (15.0%)</option>
+    <option value="0.00">IMPRESORA LASER, ETIQUETAS (0.0%)</option>
+    <option value="0.15">IMPRESOS, INFORMACIÓN DE MEDICINA/ESTAMPAS/CARTAS DE AZAR (15.0%)</option>
+    <option value="0.10">INSTRUMENTOS DE MUSICA (10.0%)</option>
+    <option value="0.00">JERINGAS (0.0%)</option>
+    <option value="0.15">JUEGOS DE MESA, JUGUETES (15.0%)</option>
+    <option value="0.00">GLUCOSA (0.0%)</option>
+    <option value="0.15">LAPPICEROS (15.0%)</option>
+    <option value="0.15">LAPICES (15.0%)</option>
+    <option value="0.00">LAPTOPS (0.0%)</option>
+    <option value="0.05">LENTES DE CONTACTO (5.0%)</option>
+    <option value="0.15">IMPRESORAS (15.0%)</option>
+    <option value="0.15">IMPRESORAS (15.0%)</option>
+    <option value="0.00">LIBROS (0.0%)</option>
+    <option value="0.15">LIBROS DIDACTICOS (15.0%)</option>
+    <option value="0.15">LICUADORAS (15.0%)</option>
+    <option value="0.10">LINTERNAS (10.0%)</option>
+    <option value="0.10">LLANTAS (10.0%)</option>
+    <option value="0.10">LODERAS (10.0%)</option>
+    <option value="0.00">LP (0.0%)</option>
+    <option value="0.15">MALETAS/BOLSONES (15.0%)</option>
+    <option value="0.10">MENECILLAS (10.0%)</option>
+    <option value="0.10">MANGUERA DE HULE (10.0%)</option>
+    <option value="0.00">MANOS LIBRES (0.0%)</option>
+    <option value="0.10">MARACAS (10.0%)</option>
+    <option value="0.15">MARCADORES (15.0%)</option>
+    <option value="0.00">MEMORIAS (0.0%)</option>
+    <option value="0.00">MEMORIAS RAM (0.0%)</option>
+    <option value="0.00">MICROFONO (0.0%)</option>
+    <option value="0.15">MICROONDAS (15.0%)</option>
+    <option value="0.00">MONITOR PARA MEDIR LA GLUCOSA/PRESION (0.0%)</option>
+    <option value="0.00">MONITORES (0.0%)</option>
+    <option value="0.00">MOTORES (0.0%)</option>
+    <option value="0.00">MOUSE (.0%)</option>
+    <option value="0.15">OLLAS (15.0%)</option>
+    <option value="0.10">PALOS DE GOLF (10.0%)</option>
+    <option value="0.00">PANTALLAS (0.0%)</option>
+    <option value="0.10">DEPESTAL (10.0%)</option>
+    <option value="0.15">PEDESTAL DE MÚSICA/MONOPÍES/BÍPODES/TRIPODES (15.0%)</option>
+    <option value="0.00">PEDESTALES (0.0%)</option>
+    <option value="0.10">PEDESTAL DE MÚSICA/MONOPÍES/BÍPODES/TRIPODES (10.0%)</option>
+    <option value="0.15">PINTALABIOS (15.0%)</option>
+    <option value="0.15">PINZAS PARA PESTAÑAS (15.0%)</option>
+    <option value="0.00">PISTONES (0.0%)</option>
+    <option value="0.15">PLANCHAS (15.0%)</option>
+    <option value="0.15">PORTEZUELAS  (15.0%)</option>
+    <option value="0.00">PRESION (0.0%)</option>
+    <option value="0.15">PROCESADORES DE ALIMENTOS (15.0%)</option>
+    <option value="0.15">PROTECTORES DE PANTALLA (15.0%)</option>
+    <option value="0.00">PROTESIS (0.0%)</option>
+    <option value="0.15">PULSERAS (15.0%)</option>
+    <option value="0.10">RADIADORES (10.0%)</option>
+    <option value="0.15">RADIOS (15.0%)</option>
+    <option value="0.15">REFRIGERADORAS (15.0%)</option>
+    <option value="0.15">RELOJES (15.0%)</option>
+    <option value="0.00">REPRODUCTORES DE MUSICA (0.0%)</option>
+    <option value="0.10">REPUESTOS PARA AUTOS (10.0%)</option>
+    <option value="0.00">REPUESTOS PARA MAQUINARIA INDUSTRIAL (0.0%)</option>
+    <option value="0.00">REVISTAS (0.0%)</option>
+    <option value="0.15">ROPA (15.0%)</option>
+    <option value="0.15">SABANAS (15.0%)</option>
+    <option value="0.15">SARTENES (15.0%)</option>
+    <option value="0.10">SAXOFONES (10.0%)</option>
+    <option value="0.10">SEAL BEAM (10.0%)</option>
+    <option value="0.15">SECADORAS (15.0%)</option>
+    <option value="0.00">SENSORES (0.0%)</option>
+    <option value="0.15">SOMBREROS (15.0%)</option>
+    <option value="0.10">TALCOS (10.0%)</option>
+    <option value="0.15">TAPASOL (15.0%)</option>
+    <option value="0.00">TARJETA DE VIDEO (0.0%)</option>
+    <option value="0.00">TARJETA MADRE (0.0%)</option>
+    <option value="0.00">TECLADO (0.0%)</option>
+    <option value="0.00">TEJAS (0.0%)</option>
+    <option value="0.00">TELEFONO DE CASA (0.0%)</option>
+    <option value="0.15">PROYECTORES (15.0%)</option>
+    <option value="0.15">TENIS (15.0%)</option>
+    <option value="0.00">TESTER (0.0%)</option>
+    <option value="0.10">TIMONES (10.0%)</option>
+    <option value="0.15">TOALLAS (15.0%)</option>
+    <option value="0.00">TONERS (0.0%)</option>
+    <option value="0.15">TRAJES DE BAÑO (15.0%)</option>
+    <option value="0.00">TRIDODES (0.0%)</option>
+    <option value="0.10">TROMPETAS (10.0%)</option>
+    <option value="0.10">TUMBAS (10.0%)</option>
+    <option value="0.15">UÑAS ACRILICAS (15.0%)</option>
+    <option value="0.00">UPS (0.0%)</option>
+    <option value="0.00">USB (0.0%)</option>
+    <option value="0.15">VAJILLAS (15.0%)</option>
+    <option value="0.00">VÁVULAS (0.0%)</option>
+    <option value="0.15">VASOS (15.0%)</option>
+    <option value="0.00">VENDAS (0.0%)</option>
+    <option value="0.15">VENTILADORES (15.0%)</option>
+    <option value="0.15">VESTIDOS (15.0%)</option>
+    <option value="0.15">VIDEO JUEGOS (15.0%)</option>
+    <option value="0.15">VIDRIO TEMPLADO (15.0%)</option>
+    <option value="0.10">VIDRIOS (10.0%)</option>
+    <option value="0.10">VIOLINES (10.0%)</option>
+    <option value="0.15">VISERAS (15.0%)</option>
+    <option value="0.15">ZAPATOS (15.0%)</option>
+      </select>
+
+      <button type="submit">Calcular</button>
+    </form>
+
+    <!-- Resultados -->
+    <div id="resultado"></div>
+
+    <!-- Términos y condiciones -->
+    <div class="terminos">
+      <h3>*Recuerda*</h3>
+      <ul>
+        <li>El valor mostrado es un estimado, puede variar.</li>
+        <li>Tipo de cambio para referencia es de Q7.95 por $1</li>
+        <li>Si el paquete tiene valor declarado mayor a $1,000.00 CIF, se debe realizar el Tramite de Declaración Única Centro Americana, almacenaje según cantidad de días de estadía en caso requerido.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
